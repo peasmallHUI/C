@@ -1,5 +1,14 @@
 #include <iostream>
+
+bool is_little_endian();
 int main()
+{
+    
+    std::cout << is_little_endian;
+    return 0;
+}
+
+bool is_little_endian()
 {
     union xiaoduan
     {
@@ -7,6 +16,5 @@ int main()
         char b;
     } x;
     x.a = 0x01234567;
-    std::cout << std::hex << int(x.b);
-    return 0;
+    return 0x01 == x.b; 
 }
